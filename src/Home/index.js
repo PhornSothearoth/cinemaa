@@ -1,17 +1,10 @@
-import { data } from "autoprefixer";
-import { Button, Modal } from "flowbite-react";
 import { useEffect, useState } from "react";
-import Cards from "../components/Cards";
 import HomePage from "../components/HomePage";
-import Modals from "../components/Modals";
-import MovieListHeaing from "../components/MovieListHeaing";
-import SearchBox from "../components/SearchBox";
 import SearchMovies from "../components/SearchMovies";
 import Slider from "../components/Slider";
-import Trailer from "../components/Trailer";
-import Loading from "../page/Loading";
 import PupolarMovies from "../page/PupolarMovies";
 import UpComing from "../page/UpComing";
+
 
 function Home() {
   const [searchValue, setSearchValue] = useState("");
@@ -40,19 +33,15 @@ function Home() {
 
 
 
-  // Modal
 
   return (
     <>
       <main>
         <HomePage />
         <div className="">
-            <SearchMovies />
+          <SearchMovies/>
           </div>
-        <section onClick={() => 
-         { setOpenModal(true)
-          setMovie(data)
-        }}>
+        <section>
           
           <section className="">
             <div className=" mb-8 lg:mb-16 text-center">
@@ -71,14 +60,6 @@ function Home() {
           <UpComing />
         </section>
 
-        {/* Model */}
-
-     
-        <Modals
-          openModal={openModal}
-          onCloseModal={() => setOpenModal(false)}
-          data={movie}
-        />
       </main>
     </>
   );
