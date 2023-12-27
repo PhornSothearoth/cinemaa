@@ -9,7 +9,7 @@ export default function PupolarMovies() {
   const [loading, setLoading] = useState([true]);
 
   const getMovies = async () => {
-    const url = `http://www.omdbapi.com/?s=fast&apikey=b95d6092`;
+    const url = `https://www.omdbapi.com/?s=fast&apikey=b95d6092`;
 
     const response = await fetch(url);
     const responseJson = await response.json();
